@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Registan Travel — Home (Bootstrap)</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    :root {
+      --night:  #0B1F4B;
+      --gold:   #E0A526;
+      --sand:   #FAF6EE;
+    }
+    body        { background-color: var(--sand); font-family: Arial, sans-serif; }
+    h1,h2,h3   { font-family: Georgia, serif; color: var(--night); }
+    .navbar     { background-color: var(--night) !important; }
+    .navbar-brand span { color: var(--gold); }
+    .nav-link:hover    { background-color: var(--gold); border-radius: 4px; }
+    .nav-link.active   { border-bottom: 3px solid var(--gold); }
+    .hero-section {
+      background: linear-gradient(135deg, var(--night) 0%, #163a7a 100%);
+      color: #fff; text-align: center; padding: 70px 20px;
+    }
+    .hero-section h1 { color: #fff; }
+    .btn-gold {
+      background-color: var(--gold); color: var(--night);
+      font-weight: bold; border: none;
+    }
+    .btn-gold:hover { box-shadow: 0 4px 12px rgba(0,0,0,.25); color: var(--night); }
+    .btn-gold:active { transform: scale(0.95); }
+    .card { border: none; border-radius: 12px; transition: transform .3s, box-shadow .3s; overflow: hidden; }
+    .card:hover { transform: translateY(-6px); box-shadow: 0 8px 20px rgba(0,0,0,.15); }
+    .card-img-top {
+      height: 160px; display: flex; align-items: center;
+      justify-content: center; font-size: 3rem; color: #fff;
+    }
+    .bg-tashkent  { background: linear-gradient(135deg, #1a3a6a, #0B1F4B); }
+    .bg-samarkand { background: linear-gradient(135deg, #E0A526, #c98d12); }
+    .bg-khiva     { background: linear-gradient(135deg, #2ecc71, #1a9c52); }
+    .badge-gold {
+      background-color: var(--gold); color: var(--night);
+      font-weight: bold; position: absolute; top: 12px; right: 12px;
+      border-radius: 20px; padding: 4px 10px; text-transform: uppercase;
+      font-size: .75rem;
+    }
+    .price { font-size: 1.3rem; font-weight: bold; color: var(--night); }
+    footer { background-color: var(--night); color: #ccc; }
+    footer span { color: var(--gold); }
+  </style>
+</head>
+<body>
+  <nav class="navbar navbar-expand-md navbar-dark fixed-top">
+    <div class="container">
+      <a class="navbar-brand fw-bold" href="#">Registan <span>Travel</span></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-end" id="navMenu">
+        <ul class="navbar-nav">
+          <li class="nav-item"><a class="nav-link active" href="index-bootstrap.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="booking.html">Booking</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <div style="height:56px;"></div>
+  <section class="hero-section">
+    <div class="container">
+      <h1 class="display-4 fw-bold">Discover Uzbekistan</h1>
+      <p class="lead mt-3 mb-4 mx-auto" style="max-width:600px;">
+        Explore the ancient Silk Road cities with our guided tours. From Tashkent's vibrant bazaars to Samarkand's stunning Registan Square.
+      </p>
+      <a href="booking.html" class="btn btn-gold btn-lg">Book Now</a>
+    </div>
+  </section>
+  <section class="py-5">
+    <div class="container">
+      <h2 class="text-center mb-4">Our Tours</h2>
+      <div class="row g-4 justify-content-center">
+        <div class="col-12 col-md-6 col-xl-4">
+          <div class="card position-relative shadow-sm h-100">
+            <span class="badge-gold">Best Seller</span>
+            <div class="card-img-top bg-tashkent">🕌</div>
+            <div class="card-body">
+              <h3 class="h5">Old Tashkent Walk</h3>
+              <p class="text-muted mb-1">📍 Tashkent · 1 Day</p>
+              <p class="price mb-0">$35 USD</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-md-6 col-xl-4">
+          <div class="card position-relative shadow-sm h-100">
+            <span class="badge-gold">Top Rated</span>
+            <div class="card-img-top bg-samarkand">🏛️</div>
+            <div class="card-body">
+              <h3 class="h5">Registan &amp; Gur-e-Amir</h3>
+              <p class="text-muted mb-1">📍 Samarkand · 2 Days</p>
+              <p class="price mb-0">$120 USD</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-md-6 col-xl-4">
+          <div class="card position-relative shadow-sm h-100">
+            <span class="badge-gold">New</span>
+            <div class="card-img-top bg-khiva">🏰</div>
+            <div class="card-body">
+              <h3 class="h5">Khiva Itchan Kala</h3>
+              <p class="text-muted mb-1">📍 Khiva · 3 Days</p>
+              <p class="price mb-0">$210 USD</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <p class="text-center text-muted mt-4">
+        <em>Part C comparison: With Bootstrap 5, I wrote only ~40 lines of CSS (brand colours and minor overrides) compared to ~300 lines of hand-written CSS in Part A, because Bootstrap's grid, navbar, and card components handle the layout and responsive breakpoints automatically.</em>
+      </p>
+    </div>
+  </section>
+  <footer class="text-center py-3 mt-4">
+    <p class="mb-0">&copy; 2025 <span>Registan Travel</span> · Tashkent, Uzbekistan</p>
+  </footer>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

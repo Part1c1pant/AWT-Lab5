@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Registan Travel — Booking</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header id="site-header">
+    <div class="logo">Registan <span>Travel</span></div>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="booking.html" class="active">Booking</a></li>
+      </ul>
+    </nav>
+  </header>
+  <section class="booking-section">
+    <h2>Book Your Tour</h2>
+    <div id="form-message" class="message"></div>
+    <form id="booking-form" novalidate>
+      <div class="form-group">
+        <label for="name" class="required">Full Name</label>
+        <input type="text" id="name" placeholder="e.g. Dilnoza Rakhimova">
+      </div>
+      <div class="form-group">
+        <label for="email" class="required">Email Address</label>
+        <input type="email" id="email" placeholder="e.g. dilnoza@mail.uz">
+      </div>
+      <div class="form-group">
+        <label for="tour" class="required">Select Tour</label>
+        <select id="tour">
+          <option value="35">Old Tashkent Walk — $35 USD</option>
+          <option value="120">Registan &amp; Gur-e-Amir — $120 USD</option>
+          <option value="210">Khiva Itchan Kala — $210 USD</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="travellers" class="required">Number of Travellers</label>
+        <select id="travellers">
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5</option>
+          <option value="6">6</option>
+          <option value="7">7</option>
+          <option value="8">8</option>
+          <option value="9">9</option>
+          <option value="10">10</option>
+          <option value="11">11</option>
+          <option value="12">12</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="date" class="required">Travel Date</label>
+        <input type="date" id="date">
+      </div>
+      <div id="price-display">
+        Total: 1 × 35 USD = 35 USD
+      </div>
+      <button type="submit" class="btn btn-submit">Submit Booking</button>
+    </form>
+  </section>
+  <footer>
+    <p>&copy; 2026 <span>Registan Travel</span> · Tashkent, Uzbekistan</p>
+  </footer>
+  <script src="js/main.js"></script>
+</body>
+</html>
